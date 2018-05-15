@@ -1,0 +1,26 @@
+{
+  "name": "next-content-type",
+  "description": "Content type for next",
+  "main": "dist/next-content-type.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-content-type",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
