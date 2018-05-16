@@ -8,9 +8,12 @@ npm install -S afeiship/next-content-type --registry=https://registry.npm.taobao
 
 ## usage:
 ```js
-  var TYPES = {
-    'urlencoded':'application/x-www-form-urlencoded',
-    'multipart':'multipart/form-data',
-    'json':'application/json;charset=utf-8'
-  };
+  nx.contentType('urlencoded'); 
+  // application/x-www-form-urlencoded
+
+  nx.contentType('multipart'); 
+  // multipart/form-data
+
+  nx.contentType('json'); 
+  // application/json;charset=utf-8
 ```
