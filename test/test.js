@@ -1,17 +1,15 @@
-var assert = require('assert');
 var nx = require('next-js-core2');
 require('../src/next-content-type');
 
-describe('next/contentType', function () {
 
-  it('nx.contentType', function () {
-    var rs1 = nx.contentType('urlencoded');
-    var rs2 = nx.contentType('multipart');
-    var rs3 = nx.contentType('json');
+test('nx.contentType', function () {
+  var obj1 = {name: 'fei'};
+  var obj2 = {email: '1290657123@qq.com'};
 
-    assert.equal(rs1, 'application/x-www-form-urlencoded');
-    assert.equal(rs2, 'multipart/form-data');
-    assert.equal(rs3, 'application/json;charset=utf-8');
-  });
+  var result = {};
 
+  nx.contentType(result, obj1, obj2);
+
+  expect(result.name, obj1.name).toBe(null);
 });
+
