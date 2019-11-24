@@ -11,13 +11,10 @@
    * http://www.jianshu.com/p/d616d3bf391f
    */
 
-  gulp.task(
-    'bump',
-    gulp.parallel(function() {
-      gulp
-        .src(['./*.json'])
-        .pipe($.bump())
-        .pipe(gulp.dest('./'));
-    })
-  );
+  gulp.task('bump', function() {
+    gulp
+      .src(['./*.json'])
+      .pipe($.bump())
+      .pipe(gulp.dest('./'));
+  });
 })();

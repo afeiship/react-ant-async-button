@@ -1,7 +1,8 @@
 /*!
- * name: next-content-type
+ * name: @feizheng/next-content-type
  * url: https://github.com/afeiship/next-content-type
  * version: 1.0.0
+ * date: 2019-11-24T08:08:42.400Z
  * license: MIT
  */
 
@@ -22,3 +23,5 @@
     module.exports = nx.contentType;
   }
 })();
+
+//# sourceMappingURL=next-content-type.js.map

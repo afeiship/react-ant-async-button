@@ -1,7 +1,7 @@
 {
   "name": "next-content-type",
   "version": "0.0.1",
-  "description": "Content type for next",
+  "description": "nextBoilerplatePackageDescription",
   "main": "dist/next-content-type.js",
   "authors": [
     "afei"
