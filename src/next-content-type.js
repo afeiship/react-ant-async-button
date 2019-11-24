@@ -1,6 +1,6 @@
 (function() {
   var global = global || window || self || Function('return this')();
-  var nx = global.nx || require('next-js-core2');
+  var nx = global.nx || require('@feizheng/next-js-core2');
   var TYPES = {
     urlencoded: 'application/x-www-form-urlencoded',
     multipart: 'multipart/form-data',
