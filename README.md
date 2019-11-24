@@ -8,7 +8,14 @@ npm install -S @feizheng/next-content-type
 
 ## usage
 ```js
-import 'next-content-type';
+import '@feizheng/next-content-type';
 
-//DOCS here!
+nx.contentType('urlencoded'); 
+// application/x-www-form-urlencoded
+
+nx.contentType('multipart'); 
+// multipart/form-data
+
+nx.contentType('json'); 
+// application/json;charset=utf-8
 ```
