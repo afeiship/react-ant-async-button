@@ -1,8 +1,8 @@
 /*!
  * name: @feizheng/next-content-type
  * url: https://github.com/afeiship/next-content-type
- * version: 1.0.2
- * date: 2020-01-06T01:54:01.478Z
+ * version: 1.1.0
+ * date: 2020-01-06T01:58:20.170Z
  * license: MIT
  */
 
@@ -17,7 +17,7 @@
   };
 
   nx.contentType = function(inKey) {
-    return TYPES[inKey];
+    return TYPES[inKey] || TYPES.raw;
   };
 
   if (typeof module !== 'undefined' && module.exports) {
