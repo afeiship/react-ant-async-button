@@ -18,4 +18,8 @@ nx.contentType('multipart');
 
 nx.contentType('json'); 
 // application/json;charset=utf-8
+
+nx.contentType('raw'); 
+nx.contentType('unsupported'); 
+// application/x-www-form-urlencoded
 ```
