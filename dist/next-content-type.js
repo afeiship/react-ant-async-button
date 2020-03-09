@@ -1,8 +1,8 @@
 /*!
  * name: @feizheng/next-content-type
  * url: https://github.com/afeiship/next-content-type
- * version: 1.1.2
- * date: 2020-03-09T01:34:03.522Z
+ * version: 1.1.4
+ * date: 2020-03-09T01:34:56.188Z
  * license: MIT
  */
 

@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-content-type",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Content type for next.",
   "homepage": "https://github.com/afeiship/next-content-type",
   "author": {
@@ -10,7 +10,6 @@
   "scripts": {
     "build": "gulp",
     "test": "jest",
-    "version": "gulp bump",
     "start": "node ./express.js"
   },
   "main": "dist/next-content-type.js",
