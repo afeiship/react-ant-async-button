@@ -5,7 +5,8 @@
     raw: 'application/x-www-form-urlencoded',
     urlencoded: 'application/x-www-form-urlencoded',
     multipart: 'multipart/form-data',
-    json: 'application/json;charset=utf-8'
+    json: 'application/json;charset=utf-8',
+    plain: 'text/plain'
   };
 
   nx.contentType = function(inKey) {

@@ -1,8 +1,8 @@
 /*!
  * name: @feizheng/next-content-type
  * url: https://github.com/afeiship/next-content-type
- * version: 1.1.0
- * date: 2020-01-06T01:58:20.170Z
+ * version: 1.1.2
+ * date: 2020-03-09T01:34:03.522Z
  * license: MIT
  */
 
@@ -13,7 +13,8 @@
     raw: 'application/x-www-form-urlencoded',
     urlencoded: 'application/x-www-form-urlencoded',
     multipart: 'multipart/form-data',
-    json: 'application/json;charset=utf-8'
+    json: 'application/json;charset=utf-8',
+    plain: 'text/plain'
   };
 
   nx.contentType = function(inKey) {
