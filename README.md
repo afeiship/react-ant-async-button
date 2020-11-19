@@ -1,9 +1,14 @@
 # next-content-type
-> Content type for next.
+> Get correct content type for next.
+
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
 ## installation
 ```bash
-npm install -S @feizheng/next-content-type
+npm install -S @jswork/next-content-type
 ```
 
 ## usage
@@ -19,10 +24,21 @@ nx.contentType('multipart');
 nx.contentType('json'); 
 // application/json;charset=utf-8
 
-nx.contentType('plain'); 
-// text/plain
-
 nx.contentType('raw'); 
-nx.contentType('unsupported'); 
-// application/x-www-form-urlencoded
+// text/plain
 ```
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/next-content-type/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/next-content-type
+[version-url]: https://npmjs.org/package/@jswork/next-content-type
+
+[license-image]: https://img.shields.io/npm/l/@jswork/next-content-type
+[license-url]: https://github.com/afeiship/next-content-type/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-content-type
+[size-url]: https://github.com/afeiship/next-content-type/blob/master/dist/next-content-type.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-content-type
+[download-url]: https://www.npmjs.com/package/@jswork/next-content-type
