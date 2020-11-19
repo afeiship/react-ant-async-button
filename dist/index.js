@@ -3,7 +3,7 @@
  * description: Get correct content type for next.
  * homepage: https://github.com/afeiship/next-content-type
  * version: 1.0.0
- * date: 2020-11-19 13:47:32
+ * date: 2020-11-19 13:48:13
  * license: MIT
  */
 

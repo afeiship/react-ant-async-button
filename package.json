@@ -36,5 +36,14 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "content-type",
+    "json",
+    "form-data",
+    "next",
+    "urlencode",
+    "raw",
+    "plain"
+  ]
 }
