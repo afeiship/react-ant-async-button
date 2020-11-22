@@ -13,7 +13,7 @@ npm install -S @jswork/next-content-type
 
 ## usage
 ```js
-import '@feizheng/next-content-type';
+import '@jswork/next-content-type';
 
 nx.contentType('urlencoded'); 
 // application/x-www-form-urlencoded
