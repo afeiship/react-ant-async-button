@@ -2,8 +2,8 @@
  * name: @jswork/next-content-type
  * description: Get correct content type for next.
  * homepage: https://github.com/afeiship/next-content-type
- * version: 1.0.1
- * date: 2021-01-06 21:43:25
+ * version: 1.0.2
+ * date: 2021-01-09 16:46:08
  * license: MIT
  */
 
