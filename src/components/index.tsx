@@ -1,7 +1,7 @@
 import noop from '@jswork/noop';
 import classNames from 'classnames';
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import { Button, ButtonProps } from 'antd';
 
 const CLASS_NAME = 'react-ant-async-link';
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -26,14 +26,14 @@ export type ReactAntAsyncLinkProps = {
   /**
    * The handler when status change.
    */
-  onChange?: (isLoading: boolean) => void;
-};
+  onChange?: (evt: any) => void;
+} & ButtonProps;
 
 export default class ReactAntAsyncLink extends Component<ReactAntAsyncLinkProps> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
-    minGap: 500,
+    minGap: 0,
     callback: () => Promise.resolve(),
     value: false,
     onChange: noop
@@ -44,11 +44,14 @@ export default class ReactAntAsyncLink extends Component<ReactAntAsyncLinkProps>
   handleClick = () => {
     const { callback, minGap, onChange } = this.props;
     const start = Date.now();
-    this.setState({ loading: true }, () => onChange!(true));
+    const getTarget = (value) => {
+      return { target: { value } };
+    };
+    this.setState({ loading: true }, () => onChange!(getTarget(true)));
     callback!().finally(async () => {
       const gap = Date.now() - start;
       if (minGap && gap < minGap) await delay(minGap - gap);
-      this.setState({ loading: false }, () => onChange!(false));
+      this.setState({ loading: false }, () => onChange!(getTarget(false)));
     });
   };
 

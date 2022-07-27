@@ -19,7 +19,7 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "esModuleInterop":true,
+    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
@@ -32,6 +32,8 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "__tests__",
+    "cypress"
   ]
 }
