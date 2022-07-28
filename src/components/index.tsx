@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import React, { Component } from 'react';
 import { Button, ButtonProps } from 'antd';
 
-const CLASS_NAME = 'react-ant-async-link';
+const CLASS_NAME = 'react-ant-async-button';
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-export type ReactAntAsyncLinkProps = {
+export type ReactAntAsyncButtonProps = {
   /**
    * The extended className for component.
    */
@@ -29,7 +29,7 @@ export type ReactAntAsyncLinkProps = {
   onChange?: (evt: any) => void;
 } & ButtonProps;
 
-export default class ReactAntAsyncLink extends Component<ReactAntAsyncLinkProps> {
+export default class ReactAntAsyncButton extends Component<ReactAntAsyncButtonProps> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {

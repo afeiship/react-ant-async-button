@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactAntAsyncLink from '../../src/main';
+import ReactAntAsyncButton from '../../src/main';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
 export default () => {
   return (
     <Container>
-      <ReactAntAsyncLink
+      <ReactAntAsyncButton
         minGap={2000}
         callback={() => {
           return new Promise((resolve) => {
@@ -20,7 +20,7 @@ export default () => {
           });
         }}>
         Download
-      </ReactAntAsyncLink>
+      </ReactAntAsyncButton>
     </Container>
   );
 };

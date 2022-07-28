@@ -20,7 +20,7 @@ export default [
       format: 'umd',
       exports: 'named',
       sourcemap: false,
-      name: 'ReactAntAsyncLinkComponent',
+      name: 'ReactAntAsyncButtonComponent',
       globals: {
         '@jswork/noop': 'noop',
         'prop-types': 'PropTypes',

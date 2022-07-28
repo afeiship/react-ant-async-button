@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import ReactAntAsyncLink from '../src/main';
+import ReactAntAsyncButton from '../src/main';
 // import { act } from 'react-test-renderer';
 
 jest.setTimeout(50000);
@@ -8,14 +8,14 @@ jest.useFakeTimers();
 
 
 describe('01/basic props', () => {
-  test('<ReactAntAsyncLink /> minGap timeout', () => {
+  test('<ReactAntAsyncButton /> minGap timeout', () => {
     // Arrange
 
     // const handleChange = jest.fn();
     jest.useFakeTimers();
 
     const { container } = render(
-      <ReactAntAsyncLink
+      <ReactAntAsyncButton
         minGap={200}
         test-id="btn1"
         callback={() => {
@@ -26,10 +26,10 @@ describe('01/basic props', () => {
           });
         }}>
         Download
-      </ReactAntAsyncLink>
+      </ReactAntAsyncButton>
     );
 
-    const el = document.querySelector('.react-ant-async-link')! as HTMLButtonElement;
+    const el = document.querySelector('.react-ant-async-button')! as HTMLButtonElement;
 
     el.click();
 

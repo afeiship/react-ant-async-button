@@ -1,8 +1,8 @@
 {
-  "name": "@jswork/react-ant-async-link",
+  "name": "@jswork/react-ant-async-button",
   "homepage": "https://js.work",
   "version": "1.0.0",
-  "description": "Async link with loading based on antd.",
+  "description": "Async button with loading based on antd.",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/main.d.ts",
