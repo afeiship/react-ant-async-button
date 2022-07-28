@@ -1,5 +1,5 @@
 # react-ant-async-button
-> Async button with loading based on antd.
+> Async link with loading based on antd.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -12,17 +12,6 @@ npm install -S @jswork/react-ant-async-button
 ```
 
 ## usage
-1. import css
-  ```scss
-  @import "~@jswork/react-ant-async-button/dist/style.css";
-
-  // or use sass
-  @import "~@jswork/react-ant-async-button/dist/style.scss";
-
-  // customize your styles:
-  $react-ant-async-button-options: ()
-  ```
-2. import js
   ```js
   import React from 'react';
   import ReactAntAsyncButton from '@jswork/react-ant-async-button';
@@ -33,10 +22,20 @@ npm install -S @jswork/react-ant-async-button
     margin: 30px auto 0;
   `;
 
-  export default (props: any) => {
+  export default () => {
     return (
       <Container>
-        <ReactAntAsyncButton />
+        <ReactAntAsyncButton
+          minGap={2000}
+          callback={() => {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve(null);
+              }, 100);
+            });
+          }}>
+          Download
+        </ReactAntAsyncButton>
       </Container>
     );
   };

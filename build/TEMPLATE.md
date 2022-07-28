@@ -12,17 +12,6 @@ npm install -S @jswork/react-ant-async-button
 ```
 
 ## usage
-1. import css
-  ```scss
-  @import "~@jswork/react-ant-async-button/dist/style.css";
-
-  // or use sass
-  @import "~@jswork/react-ant-async-button/dist/style.scss";
-
-  // customize your styles:
-  $react-ant-async-button-options: ()
-  ```
-2. import js
   ```js
 __GENERATE_DAPP__
   ```

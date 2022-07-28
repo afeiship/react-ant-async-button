@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import ReactAntAsyncButton from '../src/main';
 // import { act } from 'react-test-renderer';
 
@@ -8,16 +8,21 @@ jest.useFakeTimers();
 
 
 describe('01/basic props', () => {
-  test('<ReactAntAsyncButton /> minGap timeout', () => {
+  test('<ReactAntAsyncButton /> minGap timeout', async () => {
     // Arrange
 
     // const handleChange = jest.fn();
     jest.useFakeTimers();
 
-    const { container } = render(
+    let isLoading = false;
+
+    render(
       <ReactAntAsyncButton
         minGap={200}
-        test-id="btn1"
+        onChange={e => {
+          console.log('is value:', e.target.value);
+          isLoading = e.target.value;
+        }}
         callback={() => {
           return new Promise((resolve) => {
             setTimeout(() => {
@@ -33,11 +38,14 @@ describe('01/basic props', () => {
 
     el.click();
 
-    jest.advanceTimersByTime(2000);
-    jest.clearAllTimers()
+    fireEvent.click(el);
 
-    console.log(container.innerHTML);
+    console.log('have click');
 
+    jest.advanceTimersByTime(1000);
+
+    console.log('to last', isLoading);
+    // todo: why not to false?
     // expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });

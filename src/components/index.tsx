@@ -5,6 +5,7 @@ import { Button, ButtonProps } from 'antd';
 
 const CLASS_NAME = 'react-ant-async-button';
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+const val2tar = (val) => ({ target: { value: val } });
 
 export type ReactAntAsyncButtonProps = {
   /**
@@ -44,16 +45,19 @@ export default class ReactAntAsyncButton extends Component<ReactAntAsyncButtonPr
   handleClick = () => {
     const { callback, minGap, onChange } = this.props;
     const start = Date.now();
-    const getTarget = (value) => {
-      return { target: { value } };
-    };
-    this.setState({ loading: true }, () => onChange!(getTarget(true)));
+    this.setState({ loading: true }, () => onChange!(val2tar(true)));
     callback!().finally(async () => {
       const gap = Date.now() - start;
       if (minGap && gap < minGap) await delay(minGap - gap);
-      this.setState({ loading: false }, () => onChange!(getTarget(false)));
+      this.setState({ loading: false }, () => onChange!(val2tar(false)));
     });
   };
+
+  shouldComponentUpdate(inProps: Readonly<ReactAntAsyncButtonProps>): boolean {
+    const { value } = inProps;
+    if (this.state.loading !== value) this.setState({ loading: value });
+    return true;
+  }
 
   render() {
     const { className, callback, minGap, value, onChange, ...props } = this.props;
@@ -61,8 +65,6 @@ export default class ReactAntAsyncButton extends Component<ReactAntAsyncButtonPr
 
     return (
       <Button
-        size="small"
-        type="link"
         loading={loading}
         onClick={this.handleClick}
         className={classNames(CLASS_NAME, className)}
